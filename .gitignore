@@ -1,0 +1,14 @@
+# common
+.DS_Store
+
+# project build
+resource/
+build/
+cmake-build-debug/
+
+# VS Code
+.vscode/
+
+# others
+.idea/
+
