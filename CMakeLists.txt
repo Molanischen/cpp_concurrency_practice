@@ -12,13 +12,16 @@ set(SRC_ROOT_PATH ${CMAKE_CURRENT_SOURCE_DIR})
 message(${SRC_ROOT_PATH})
 
 # 定义要编译的文件列表变量
-file(GLOB CPP_FILES_IN_UTILS "${SRC_ROOT_PATH}/test/*.cpp")
+file(GLOB CREATE_TEST "${SRC_ROOT_PATH}/create_test/*.cpp")
+file(GLOB TICKET_SALE_TEST "${SRC_ROOT_PATH}/ticket_sale_test/*.cpp")
 
 # 设置要编译的源文件
-set(SOURCE_FILES ${CPP_FILES_IN_UTILS})
+set(CREATE_TEST_FILES ${CREATE_TEST})
+set(TICKET_SALE_TEST_FILES ${TICKET_SALE_TEST})
 
 # include 头文件目录
 include_directories(${SRC_ROOT_PATH}/)
 
 #命令表示生成项目的名称是 test
-add_executable(test ${SOURCE_FILES})
+add_executable(test1 ${CREATE_TEST_FILES})
+add_executable(test2 ${TICKET_SALE_TEST_FILES})
